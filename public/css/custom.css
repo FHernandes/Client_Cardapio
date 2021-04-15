@@ -1,0 +1,170 @@
+/*============================================================================================*/
+/* Your custom styles below */
+/*============================================================================================*/
+
+/* INDEX */
+/* HEADER */
+@media (max-width: 991px){
+    header {
+    height: 50px;
+}
+    #banner {
+        height: 180px;
+    }
+    #nomeLoja {
+        position: absolute;
+    }
+    #localizacao {
+        display:none;
+    }
+    .verMapa {
+        display:none;
+    }
+    .verCarrinho {
+        display:none;
+    }
+}
+.menu-loja{
+    font-size: 1.5em;
+    font-weight: 550;
+    margin: -15px -15px 15px 20px;
+}
+/* /HEADER */
+
+/* MAIN */
+.containerMain {
+    display: grid;
+    grid-template-rows: 60px auto;
+    grid-template-columns: 56% 10px auto;
+    grid-template-areas: 
+        "gid-navcategoria gid-navcategoria gid-navcategoria"
+      "grid-categoria . grid-resumo";
+}
+@media (max-width: 900px) {
+    .containerMain {
+        display: block;
+        
+    }
+}
+/* CATEGORIA */
+.categoria {
+    grid-area: grid-categoria;
+    /* background-color: blueviolet; */
+    justify-self: stretch;
+}
+.categoria{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+@media (max-width: 1001px) {
+    .categoria{
+        padding-left: 0px;
+        padding-right: 0px;
+        
+    }
+}
+.navCategoria {
+    background-color: whitesmoke;
+    position: sticky; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+.categoria-fixa{
+    position: relative;
+    height: 515px;
+    grid-area: grid-navcategoria;
+    justify-self: stretch;
+}
+.categoria-fixa a {
+    font-size: 18px;
+    display: inline-block;
+    color:black ;
+    text-align: left;
+    padding: 5px 16px;
+    text-decoration: none;
+}
+/* PRODUTO */
+#imagem-modificacao {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    display: inline-block;
+    float: left;
+    margin: 0;
+    margin-right: 15px;
+    border: 1px solid #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+}
+.table.cart-list td figure img .imagem-modificacao {
+    width: 100%;
+    height: auto;
+}
+.imagem-modificacao {
+    display: block;
+    width: 340;
+    height: auto;
+}
+.btn-fechar {
+    padding: 1px 2px !important;
+    border-radius: 4px;
+}
+/* MODIFICACAO */
+.imgModificacao {
+    display: flex;
+    justify-content: center;
+}
+/* /MODIFICACAO */
+/* /PRODUTO */
+/* /CATEGORIA */
+/* RESUMO */
+.resumo {
+    grid-area: grid-resumo;
+    /* background-color: crimson; */
+    justify-self: stretch;
+}
+.resumo-pedido {
+    width: 350px;
+}
+/* /RESUMO */
+/* /MAIN */
+
+/* FOOTER */
+.telefone p {
+    margin: 0px 0px 5px;
+}
+/* /FOOTER */
+/* /MAIN */
+/* ------------------------------------------------------------------------------------------------------------ */
+
+/* PÁGINA DE PEDIDOS */
+.selecionarPedido {
+    position: relative;
+    justify-self: stretch;
+    padding: 10px;
+}
+.verPedidos {
+    padding-top: 30px;
+    position: relative;
+    justify-self: stretch;
+}
+.ou {
+    display: flex;
+    justify-content: center;
+}
+.btn-verTodos{
+    width: 140px;
+    height: 35px;
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+
+/* PÁGINA DE CADASTRO */
+.btn-cadastrar{
+    background-color: #e54750;
+    text-transform: uppercase;
+    color: white;
+}
+/* /PÁGINA DE CADASTRO */
