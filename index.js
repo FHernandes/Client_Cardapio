@@ -1,24 +1,35 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+const port = 1010;
 
-// View engine
-app.set('view engine', 'ejs');
-app.use(express.static("public"));
-
+// Set body-parser
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-var identificacaoLoja;
+// Static files
+app.use(express.static('public'));
+app.use('/css', express.static(__dirname + 'public/css'));
+app.use('/img', express.static(__dirname + 'public/img'));
+app.use('/js', express.static(__dirname + 'public/js'));
 
-app.get("/:nomeLoja", (req, res) => {
-    identificacaoLoja = req.params.nomeLoja;
+// Templating engine engine
+app.set('views', './fonte/views');
+app.set('view engine', 'ejs')
+//app.use(express.static("public"));
+
+// Rotas
+const lojaRotas = require('./fonte/rotas/loja')
+app.use('/loja', lojaRotas)
+
+/*app.get("/:nomeLoja", (req, res) => {
     res.render("index");
 })
+*/
 
-app.listen(1010, () => {
+app.listen(port, () => {
     console.log("O servidor da interface está rodando!!!");
 });
 
-// module.exports = indexLoja;
+// module.exports = chave;
 // export const chave = indexLoja;

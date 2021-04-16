@@ -1,8 +1,8 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
+//const index = require('../../../index')
 // import chave from '../../../index.js'
-// const 
-// console.log(chave);
+
 
 const Identificacao = "Loja-Andre";
 
@@ -36,4 +36,4 @@ const getLoja = function getLoja() {
         })
 }
 
-// module.exports = getLoja();
+module.exports = getLoja();
