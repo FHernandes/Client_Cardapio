@@ -20,7 +20,7 @@ app.set('view engine', 'ejs')
 
 // Rotas
 const lojaRotas = require('./fonte/rotas/loja')
-app.use('/loja', lojaRotas)
+app.use('/pdv7', lojaRotas);
 
 /*app.get("/:nomeLoja", (req, res) => {
     res.render("index");
