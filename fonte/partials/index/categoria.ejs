@@ -1,11 +1,9 @@
 <div class="navCategoria" id="navCategoria">
-  <container class="navbar categoria-fixa" id="navbarCategoria">
     <% n=1 %>
     <% categorias.forEach(categoria=> { %>
       <a href="#section-<%= n %>" class="menuCategoria"><%= categoria.nome %></a>
       <% n++ %>
     <% }) %>
-  </container>
 </div>
 
 <div class="bg_gray containerMain">
