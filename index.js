@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 
+// Set .env for heroku
 require('dotenv').config({path: '.env'});
 const port = process.env.PORT || 3000;
 
@@ -18,20 +19,13 @@ app.use('/js', express.static(__dirname + 'public/js'));
 // Templating engine engine
 app.set('views', './fonte/views');
 app.set('view engine', 'ejs')
-//app.use(express.static("public"));
+
 
 // Rotas
 const lojaRotas = require('./fonte/rotas/loja')
-app.use('/pdv7', lojaRotas);
-
-/*app.get("/:nomeLoja", (req, res) => {
-    res.render("index");
-})
-*/
+app.use('/', lojaRotas);
 
 app.listen(port, () => {
     console.log("O servidor da interface está rodando!!!");
 });
 
-// module.exports = chave;
-// export const chave = indexLoja;
