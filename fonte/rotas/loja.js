@@ -21,7 +21,7 @@ lojaRotas.get('/:nomeLoja', async(req, res) => {
     //    const dadosUsuarios = await axios.get(`http://localhost:2222/pessoas/listar/${idProprietario}`);
     //    const usuarios = dadosUsuarios.data;
 
-       res.render('index', { loja: loja, categorias: categorias, produtos: produtos, usuarios: usuarios});
+       res.render('index', { loja: loja, categorias: categorias, produtos: produtos});
     } catch (error) {
         if(error.response){
             console.log(error.response.data);
