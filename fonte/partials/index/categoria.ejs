@@ -148,4 +148,11 @@
   </div>
   <!-- Não fechar o div, dá treta-->
 
-  
+  <script type="text/javascript">
+    const menuCategoria = document.querySelectorAll(".menuCategoria");
+    for ( let i = 0; i < <%= n %>; i++) {
+      if( menuCategoria[i] === "#section-<%= n %>") {
+        menuCategoria[i].className = "active";
+      }
+    }
+  </script>  
