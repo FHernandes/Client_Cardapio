@@ -72,6 +72,7 @@
     top: 0;
     width: 100%;
     display: block;
+    z-index: 1;
 }
 .menuCategoria:hover{
     background-color: #e54750;
@@ -83,7 +84,6 @@
     border-radius: 4px;
     color: white;
 }
-
 .categoria-fixa{
     position: relative;
     height: 515px;
@@ -186,3 +186,12 @@
     color: white;
 }
 /* /PÁGINA DE CADASTRO */
+
+/* ----------------------------------------------------------------------------------------------------------- */
+
+/* PÁGINA DE ERRO */
+#error_page {
+    padding: 80px 0;
+    height: auto;
+}
+/* /PÁGINA DE ERRO */
