@@ -26,6 +26,7 @@ lojaRotas.get('/:nomeLoja', async(req, res) => {
         if(error.response){
             console.log(error.response.data);
             console.log(erros.response.status);
+            res.render('error404');
         }
         else{
             console.error('Error', error.message);
