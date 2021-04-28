@@ -1,9 +1,11 @@
 <div class="navCategoria" id="navCategoria">
-    <% n=1 %>
+  <% n=1 %>
     <% categorias.forEach(categoria=> { %>
-      <a href="#section-<%= n %>" class="menuCategoria"><%= categoria.nome %></a>
+      <a href="#section-<%= n %>" class="menuCategoria">
+        <%= categoria.nome %>
+      </a>
       <% n++ %>
-    <% }) %>
+        <% }) %>
 </div>
 
 <div class="bg_gray containerMain">
@@ -96,15 +98,10 @@
                                                     <td class="alinharDireita">
                                                       R$ <%= modificacao.valor %>
                                                     </td>
-                                                    <!-- <div class="modBtn col-md-2">
-                                                      <a href="#" data-toggle="modal"
-                                                        data-target="<%/*= modificacao._id */%>"><i
-                                                          class="icon_plus_alt2"></i></a>                                                      
-                                                    </div> -->
                                                   </tr>
                                                   <% m++ %>
 
-                                                  <% }) %>
+                                                    <% }) %>
                                               </table>
 
 
@@ -116,9 +113,9 @@
 
                                       <div class="modal-footer">
                                         <button type="button" class="btn_1 btn-fechar" data-dismiss="modal"
-                                        aria-label="Fechar">
-                                        Fechar
-                                      </button>
+                                          aria-label="Fechar">
+                                          Fechar
+                                        </button>
                                       </div>
 
                                     </container>
@@ -129,16 +126,15 @@
                           </tr>
 
                           <% } %>
-                            <% }) %>
+                        <% }) %>
                               <!-- FIM PRODUTO -->
-
                     </table>
                   </div>
                   <!-- /row -->
                 </section>
 
                 <% n++ %>
-                  <% }) %>
+              <% }) %>
           </div>
         </div>
       </div>
