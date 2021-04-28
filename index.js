@@ -30,6 +30,6 @@ app.get("/error", (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log("O servidor da interface está rodando!!!");
+    console.log('Umbler listening on port %s', port);
 });
 
