@@ -22,24 +22,13 @@ app.set('view engine', 'ejs')
 
 
 // Rotas
-app.get('*', (req, res, next) => {
-    if (req.headers['x-forwarded-proto'] != 'https') {
-        // checa se o header é HTTP ou HTTPS
-        res.redirect("https://" + req.headers.host + req.url);
-        // faz o redirect para HTTPS
-    } else {
-        next();
-        // segue com a sequência das rotas
-    }
-});
-
-const lojaRotas = require('./fonte/rotas/loja')
+const lojaRotas = require('./fonte/rotas/loja');
 app.use('/', lojaRotas);
 
 app.get("/error", (req, res) => {
     res.render("error404");
-});
-
+})
+// teste
 app.listen(port, () => {
     console.log('Umbler listening on port %s', port);
 });
