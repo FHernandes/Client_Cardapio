@@ -32,4 +32,3 @@ app.get("/error", (req, res) => {
 app.listen(port, () => {
     console.log('Umbler listening on port %s', port);
 });
-
