@@ -50,7 +50,7 @@ lojaRotas.get('/pedido/:nomeLoja', async(req, res) => {
        const produtos = dadosProdutos.data;
 
        const dadosUsuarios = await axios.get(`http://localhost:2222/pessoas/listar/${idProprietario}`);
-        const usuarios = dadosUsuarios.data;
+       const usuarios = dadosUsuarios.data;
 
        res.render('index', { loja: loja, categorias: categorias, produtos: produtos, usuarios: usuarios});
     } catch (error) {
