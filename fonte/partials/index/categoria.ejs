@@ -6,7 +6,11 @@
     <% }) %>
 </div>
 
+
+
 <div class="bg_gray containerMain">
+
+  <img src="../../php/img.php" />
 
   <div class="bg_gray categoria">
     <!-- CATEGORIAS E PRODUTOS -->
@@ -28,11 +32,11 @@
                         <% if(produto.categorias.includes(categoria._id)) { %>
                           <tr>
                             <td class=" d-md-flex align-items-center">
-                              <figure>
-                                <a href="/img/menu_item_large_1.jpg" title="Photo title" data-effect="mfp-zoom-in"><img
-                                    src="/img/menu-thumb-placeholder.jpg" data-src="/img/menu-thumb-1.jpg" alt="thumb"
-                                    class="lazy"></a>
-                              </figure>
+                              
+                               
+                                  <img src="/img/menu-thumb-placeholder.jpg" alt="thumb" class="lazy">
+                                
+                              
                               <div class="flex-md-column">
                                 <h4>
                                   <%= produto.nome %>

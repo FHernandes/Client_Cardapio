@@ -18,6 +18,7 @@ lojaRotas.get('/:nomeLoja', async(req, res) => {
        const dadosProdutos = await axios.get(`https://ms-catalogo-de-produtos.herokuapp.com/produtos/listar/${idProprietario}`);
        const produtos = dadosProdutos.data;
 
+
     //    const dadosUsuarios = await axios.get(`http://localhost:2222/pessoas/listar/${idProprietario}`);
     //    const usuarios = dadosUsuarios.data;
 
