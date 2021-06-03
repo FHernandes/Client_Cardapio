@@ -2107,7 +2107,7 @@ header.sticky .main-menu > ul > li:hover > a, header.header_in .main-menu > ul >
     text-align: center;
     position: relative;
     padding: 30px 0 25px 0;
-    background-color: #e54750;
+    background-color: #e8e3e3;
   }
   #header_menu a.open_close {
     position: absolute;
@@ -2422,7 +2422,7 @@ ul#top_menu li a.login:before {
 }
 .hero_single.version_1 {
   height: 620px;
-  background: #faf3cc url(../img/hero_5.svg) center top no-repeat;
+  background: #faf3cc url(../img/Loja/hero_5_620.png) center top no-repeat;
 }
 @media (max-width: 991px) {
   .hero_single.version_1 {

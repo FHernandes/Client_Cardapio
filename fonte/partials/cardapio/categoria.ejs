@@ -5,14 +5,14 @@
         <%= categoria.nome %>
       </a>
       <% n++ %>
-        <% }) %>
+    <% }) %>
 </div>
 
 <div class="bg_gray containerMain">
 
   <div class="bg_gray categoria">
     <!-- CATEGORIAS E PRODUTOS -->
-    <div class="container margin_detail ">
+    <div class="container margin_detail">
       <div class="row">
         <div class="list_menu">
           <div class="list_menu" id="nomeCategoria">
@@ -27,15 +27,18 @@
 
                       <!-- PRODUTO -->
                       <% produtos.forEach( produto=> { %>
-                        <% if(produto.categorias.includes(categoria._id)) { %>
-                          <tr>
-                            <td class=" d-md-flex align-items-center">
-                              <figure>
-                                <a href="/img/menu_item_large_1.jpg" title="Photo title" data-effect="mfp-zoom-in"><img
-                                    src="/img/menu-thumb-placeholder.jpg" data-src="/img/menu-thumb-1.jpg" alt="thumb"
-                                    class="lazy"></a>
+                      <% imagemProduto = produto.linkImagem %>
+                                   
+                      
+                        <% if(produto.categorias.includes(categoria._id)) { %>       
+                          <tr class="linha-cardapio">
+                            <td class="d-md-flex align-items-center box">
+                              <figure class="imagem-produto">     
+                                <img src="<%= imagemProduto %>" alt="thumb" class="lazy">                                
                               </figure>
-                              <div class="flex-md-column">
+                            </td>
+                            <td>
+                              <div class="flex-md-column align-items-center"">
                                 <h4>
                                   <%= produto.nome %>
                                 </h4>
@@ -76,8 +79,8 @@
                                     <container class="none">
                                       <div class="modal-body">
 
-                                        <div class="imgModificacao"><img src="/img/home_cat_placeholder.jpg"
-                                            class="img-fuid"></div>
+                                        <div class="imgModificacao"><img src="<%= imagemProduto %>"
+                                            class="imagem-modificacao"></div>
                                         <br>
                                         <% m=1 %>
                                           <% produto.paineisModificacao.forEach( painel=> { %>
@@ -103,11 +106,9 @@
 
                                                     <% }) %>
                                               </table>
-
-
                                             </div>
 
-                                            <% }) %>
+                                          <% }) %>
 
                                       </div>
 
@@ -125,8 +126,8 @@
                             </td>
                           </tr>
 
-                          <% } %>
-                        <% }) %>
+                        <% } %>
+                      <% }) %>
                               <!-- FIM PRODUTO -->
                     </table>
                   </div>
@@ -141,3 +142,26 @@
     </div>
   </div>
   <!-- Não fechar o div, dá treta-->
+
+  <script type="text/javascript">
+
+function is_img(file) {
+	var img = new Image();
+	img.src = file;
+	img.onload = function() {
+		console.log("A imagem " + file + " existe");
+	}
+	img.onerror = function() {
+		console.log("A imagem " + file + " NAO existe");
+	}
+}
+
+
+produtos.forEach(produto => {
+  is_img("<%= imagemProduto %>");
+});
+
+
+
+
+  </script>

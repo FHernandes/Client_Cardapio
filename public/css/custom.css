@@ -2,6 +2,24 @@
 /* Your custom styles below */
 /*============================================================================================*/
 
+/* ==================================== */
+/* Páginda de Busca */
+/* ==================================== */
+.logos {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-auto-rows: minmax(130px, auto);
+
+}
+.logo {
+    height: 115px;
+    padding: 10px;
+}
+
+
+/* ==================================== */
+/* Páginda do restaurante */
+/* ==================================== */
 /* INDEX */
 /* HEADER */
 @media (max-width: 991px){
@@ -49,6 +67,11 @@
 /* CATEGORIA */
 .alinharDireita {
     text-align: right;
+}
+.alinharCentro {
+    text-align: center;
+    border: #e54750 10px;
+    display: flex;
 }
 .categoria {
     grid-area: grid-categoria;
@@ -122,13 +145,20 @@
     text-decoration: none;
 } */
 /* PRODUTO */
+.linha-cardapio {
+    width: 100%;
+}
+.box {
+    height: 135px;
+}
 .modificacao {
     padding: 20px;
 }
 .imagem-modificacao {
     display: block;
-    width: 340;
+    width: 90%;
     height: auto;
+    border-radius: 0.5em;
 }
 .modNome {
     padding: 5px;

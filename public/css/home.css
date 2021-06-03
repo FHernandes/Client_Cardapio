@@ -748,7 +748,7 @@
 
 .banner {
   background-position: center center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
